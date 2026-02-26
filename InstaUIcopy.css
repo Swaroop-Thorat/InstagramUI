@@ -1,0 +1,367 @@
+body,html{
+    margin: 0;
+}
+
+.wrapper{
+    position: relative;
+    width: 100%;
+}
+
+.Instagram{
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 20%; 
+    background-color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar .instaLogo {
+    width: 150px;
+    height: auto;
+    margin-left: 15%;
+    margin-bottom: 25px;
+}
+
+.sidebar .profile {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .profile .pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sidebar .profile .name {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #262626;
+}
+
+.sidebar .profile .handle {
+    color: #8e8e8e;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: #262626;
+    font-weight: 600;
+}
+
+.menu-item i{
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+}
+
+.menu-item.active {
+    background: linear-gradient(90deg, #e8771a 10%, #e12a70 100%);
+    color: white;
+}
+
+.logout {
+    padding: 0 10px;
+    margin-top: 20px;
+    border-top: 4px solid #F6F6F6;
+    padding-top: 15px;
+}
+
+.rightContainer{
+    width: calc(100% - 22%);
+    left: 20%;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #F6F6F6;
+    position: fixed;
+    right: 0;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 10px;
+    gap: 5px;
+    overflow-y: auto;
+}
+.rightContainer::-webkit-scrollbar {
+  display: none; 
+}
+.topNav{
+    z-index: 10 ;
+    position: sticky;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    margin-top: 2%;
+    flex-shrink: 0;
+    top: 0;
+    background-color: #F6F6F6 ;
+}
+
+.topNav .topNavDiv1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.topNav .topNavDiv1 input{
+    height: 35%;
+    width: 45%;
+    border-radius: 50px;
+    margin-left: 8%;
+    border: 0;
+    font-weight: bolder;
+    padding: 2%;
+}
+.topNav .topNavDiv2{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.topNav .topNavDiv2 i{
+   font-size:25px;
+   margin-right: 4%;
+}
+
+.topNav .topNavDiv2 button{
+    border-radius: 50px;
+    background: linear-gradient(90deg,rgb(232, 119, 26) 10%, rgb(225, 42, 112) 100%);
+    backdrop-filter: blur(0.5);
+    height: 35px;
+    width:125px;
+    margin-right: 5%;
+    color: white;
+    border: 0;
+}
+
+
+.bottomNav{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    position: relative;
+    flex-shrink: 0;
+}
+.bottomNav h1{
+    width: fit-content;
+    margin-top:0;
+    height: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.bottomNav .circleContainer{
+    gap:25px;
+    margin-top: -20px;
+    overflow-x:auto;
+    display: flex;
+    height: fit-content;
+    width: 98%;
+}
+
+.circleContainer::-webkit-scrollbar {
+  display: none; 
+}
+
+.bottomNav .circle{
+    background-color: rgb(247, 244, 244);
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 4px solid rgb(190, 70, 90);
+    padding: 2px;
+}
+.bottomNav .circle img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.bottomNav .circleContainer .mypic{
+   background-color: rgb(247, 244, 244);
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 0;
+    padding: 2px;
+    display: flex;
+    position: relative;
+}
+.bottomNav .circleContainer .mypic img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+.bottomNav .circleContainer .mypic #plus{
+    position: absolute;
+    top: 65%;
+    left: 65%;
+}
+.bottomNav .circleContainer .mypic #plus img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.bottomNav .circleContainer .storyName{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.bottomNav .circleContainer .storyName p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    justify-self: center;
+    margin-top: 6px;
+}
+
+.feedContainer{
+    width: 100%;
+    display: flex;
+    padding: 2%;   
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    flex-shrink: 0;
+}
+
+
+
+.feedContainer h1{
+    margin-left: -95%;
+    width: fit-content;
+    margin-top:0;
+    height: fit-content;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.feedContainer .post{
+    display: flex;
+    margin-bottom: 50px;
+    height: 600px;
+    width: 80%;
+    background-color: white;
+    border-radius: 35px;
+    flex-shrink: 0;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.feedContainer .post .details{
+    height: 10%;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+.feedContainer .post .details .profilePic{
+    height: 90%;
+    width:35%;
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    justify-content: start;
+    gap: 10px;
+}
+.feedContainer .post .details .profilePic .Pic{
+    background-color: white;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border:4px solid rgb(190, 70, 90) ;
+    padding: 2px;
+}
+.feedContainer .post .details .profilePic .Pic img{
+    border-radius: 50%;
+}
+
+.feedContainer .post .details .follow{
+    position: absolute;
+    margin-left: 62%;
+    margin-right:0 ;
+    height: 30px;
+    width: 85px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.feedContainer .post .photo{
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 45px;
+    display: flex;
+}
+.feedContainer .post .photo img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.feedContainer .post .icons{
+    height: 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    gap: 10px;
+    padding-left: 2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.feedContainer .post .save{
+    display: flex;
+    position:absolute;
+    margin-left: 70%;
+}
+.feedContainer .post .captions{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    text-align: start;
+}
+.feedContainer .post .captions span{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+}
+.feedContainer .post .captions p{
+    font-size: 16px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
